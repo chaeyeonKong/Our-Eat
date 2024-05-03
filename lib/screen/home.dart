@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.black.withOpacity(0.5),
+              color: Colors.black.withOpacity(0.6),
             ),
             Padding(
               padding: EdgeInsets.all(10.0),
@@ -67,7 +67,7 @@ class HomePage extends StatelessWidget {
               child: Text(
                 '우리동네에서 지금,', // 첫 번째 줄 텍스트
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 23,
                   fontWeight: FontWeight.bold,
                   color: Colors.green,
                 ),
@@ -78,7 +78,8 @@ class HomePage extends StatelessWidget {
               child: Text(
                 '가장 인기 있는 레시피', // 두 번째 줄 텍스트
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold,
                   color: Colors.green,
                 ),
               ),
