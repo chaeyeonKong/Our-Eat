@@ -2,6 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:frontend/screen/home.dart';
 import 'package:frontend/service/api_service.dart';
 
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: SignInPage(),
+    );
+  }
+}
+
 class SignInPage extends StatefulWidget {
   @override
   _SignInPageState createState() => _SignInPageState();
@@ -100,7 +115,7 @@ class _SignInPageState extends State<SignInPage> {
                             await login(_name, _password);
 
                         print("Response: $response");
-                        if (response["message"] == true) {
+                        if (response["message"] == "LOGIN_SUCCESS") {
                           Navigator.push(
                             context,
                             MaterialPageRoute(

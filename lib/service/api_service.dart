@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-const baseUrl = "http://3.36.123.200:8080";
+const baseUrl = "http://172.16.200.163:8080";
 
 // 로그인
 Future<Map<String, dynamic>> login(
