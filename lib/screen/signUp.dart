@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/screen/signIn.dart';
 import 'dart:ui' as ui;
+
+import 'package:frontend/service/api_service.dart';
 
 void main() {
   runApp(const MyApp());
@@ -167,12 +170,28 @@ class _SignUpState extends State<SignUp> {
                             ),
                             SizedBox(height: 42),
                             ElevatedButton(
-                              onPressed: () {
+                              onPressed: () async {
                                 if (_formKey.currentState!.validate()) {
                                   _formKey.currentState!.save();
-                                  // 여기에 회원가입 로직 추가 가능
-                                  // 예: API 호출 등
-                                  // showDialog(
+                                  // 회원가입 API 호출
+                                  try {
+                                    Map<String, dynamic> response =
+                                        await signup(_name, _password);
+
+                                    print("Response: $response");
+                                    if (response["message"] == true) {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  SignInPage()));
+                                    }
+                                    // response['data'];
+                                  } catch (e) {
+                                    print("signUp Request Error: $e");
+                                  }
+
+                                  //; showDialog(
                                   //   context: context,
                                   //   builder: (_) => AlertDialog(
                                   //     title: const Text('가입 완료'),
