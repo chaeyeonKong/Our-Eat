@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/screen/home.dart';
+import 'package:frontend/screen/signUp.dart';
 import 'package:frontend/service/api_service.dart';
 
 void main() {
@@ -141,10 +142,11 @@ class _SignInPageState extends State<SignInPage> {
                 SizedBox(height: 10.0),
                 InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => SignUpPage()), // signUp 페이지로 이동
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SignUp()), // signUp 페이지로 이동
+                    );
                   },
                   child: Text(
                     '회원가입하기',
