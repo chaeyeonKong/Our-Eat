@@ -46,6 +46,7 @@ final _navBarItems = [
     selectedColor: Colors.green,
   ),
   SalomonBottomBarItem(
+
     icon: const Icon(Icons.chat),
     title: const Text("커뮤니티"),
     selectedColor: Colors.green,
