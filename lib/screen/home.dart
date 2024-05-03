@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/widget/bottomNavigation.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -92,6 +93,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: GoogleBottomBar(),
     );
   }
 }
