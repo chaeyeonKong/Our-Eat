@@ -260,6 +260,39 @@ class _SelectRegionState extends State<SelectRegion> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                // 완료 텍스트 클릭 이벤트 처리
+                print('완료 버튼 클릭');
+                print(
+                    '선택한 구: ${selectedGuIndex != -1 ? gu_list[selectedGuIndex] : "구를 선택하세요"}');
+                print('선택한 동:');
+                if (selectedDongIndices.isEmpty) {
+                  print('동을 선택하세요');
+                } else {
+                  selectedDongIndices.forEach((index) {
+                    print(dongList[index]);
+                  });
+                }
+              },
+              child: Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                height: 40,
+                color: Colors.green,
+                child: Text(
+                  "완료",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
