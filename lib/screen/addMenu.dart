@@ -52,32 +52,37 @@ class TextFieldWidget extends StatelessWidget {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text('찾고싶은 메뉴를 검색해주세요'),
+              backgroundColor: Colors.white,
+              titlePadding: EdgeInsets.fromLTRB(30.0, 60.0, 30.0, 0.0),
+              title: Text('찾고싶은 메뉴를 검색해주세요',
+              style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
               contentPadding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
               content: SingleChildScrollView(
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8, // 화면 너비의 80%를 사용
-                  height: MediaQuery.of(context).size.height * 0.5, // 화면 높이의 50%를 사용
+                  height: MediaQuery.of(context).size.height * 0.3, // 화면 높이의 50%를 사용
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: '검색어를 입력하세요',
+                      Container(
+                        margin: EdgeInsets.only(top: 16.0),
+                        decoration: BoxDecoration(
+                          color:Colors.grey[200],
+                          borderRadius: BorderRadius.circular(30.0),
                         ),
-                      ),
-                      SizedBox(height: 20.0),
-                      Expanded(
-                        child: ListView.builder(itemCount: 10,
-                          itemBuilder: (context, index){
-                            return ListTile(
-                              title: Text('검색 결과 $index'),
-                              onTap: () {
-                                //검색 결과를 선택했을 때의 동작
-                                Navigator.of(context).pop();
-                              },
-                            );
-                          },
+                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: '검색어를 입력하세요',
+                            filled: true,
+                            fillColor: Colors.grey[200],
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                              borderSide: BorderSide.none,
+                            ),
+                            contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
+                            prefixIcon: Icon(Icons.search),
+                          ),
                         ),
                       ),
                     ],
