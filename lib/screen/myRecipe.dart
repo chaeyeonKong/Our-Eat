@@ -33,71 +33,68 @@ class AddRecipePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-        // 내가 등록한 메뉴
-        Padding(
-        padding: const EdgeInsets.all(16.0),
-          child: Row(
-            children: [
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(10.0),
-                    child: Image.network(
-                      'URL', // 여기에 이미지 URL 넣기
-                      fit: BoxFit.cover,
+            // 내가 등록한 메뉴
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Container(
+                          width:120,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: ClipRRect(
+                            borderRadius : BorderRadius.circular(10.0),
+                            child: Image.network(
+                              'URL',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        SizedBox(width: 16.0),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '메뉴 이름',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(height: 8.0),
+                              Text(
+                                '주문 수: 10', // 주문 수에 해당하는 데이터를 넣기
+                                style: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+                ],
               ),
-x                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  child: Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-    Text(
-    '메뉴 이름',
-    style: TextStyle(
-    fontSize: 18.0,
-    fontWeight: FontWeight.bold,
-    ),
-    ),
-    SizedBox(height: 8.0),
-    Text(
-    '주문 수: 10', // 주문 수에 해당하는 데이터를 넣기
-    style: TextStyle(
-    fontSize: 16.0,
-    ),
-    ),
-    ],
-    ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              child: Text(
+                '메뉴 재료 확인',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green,
                 ),
               ),
-              ),
-          ],
-        ),
-      ),
-      // 메뉴 재료 확인
-      Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16.0),
-        child: Text(
-          '메뉴 재료 확인',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-            color: Colors.green,
-          ),
-        ),
-      ),
-            // 재료 리스트
+            ),
             Container(
               padding: const EdgeInsets.all(8.0),
               child: GridView.count(
@@ -139,11 +136,12 @@ x                child: Container(
                   backgroundColor: Colors.green,
                   minimumSize: Size(150, 60),
                 ),
-                child: Text('메뉴 등록하기',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+                child: Text(
+                  '메뉴 등록하기',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
