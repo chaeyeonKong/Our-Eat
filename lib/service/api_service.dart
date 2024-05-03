@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-const baseUrl = "http://3.36.123.200:8080";
+const baseUrl = "http://172.16.200.163:8080";
 // 회원가입
 Future<Map<String, dynamic>> signup(String? loginId, String? password) async {
   final url = Uri.parse('$baseUrl/api/v1/user/join');

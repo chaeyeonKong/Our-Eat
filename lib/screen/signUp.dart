@@ -179,7 +179,7 @@ class _SignUpState extends State<SignUp> {
                                         await signup(_name, _password);
 
                                     print("Response: $response");
-                                    if (response["message"] == true) {
+                                    if (response["message"] == 'Success') {
                                       Navigator.push(
                                           context,
                                           MaterialPageRoute(
