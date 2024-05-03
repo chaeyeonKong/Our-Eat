@@ -91,13 +91,17 @@ class _SignInPageState extends State<SignInPage> {
             SizedBox(height: 10.0),
             InkWell(
               onTap: () {
-                // 회원가입 로직 추가
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => SignUpPage()), // signUp 페이지로 이동
+                // );
               },
               child: Text(
                 '회원가입하기',
                 style: TextStyle(
                   color: Colors.white,
                   decoration: TextDecoration.underline, // 밑줄 추가
+                  decorationColor: Colors.white,
                 ),
               ),
             ),
