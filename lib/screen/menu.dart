@@ -57,6 +57,17 @@ class MenuPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: GoogleBottomBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // 추가 버튼 클릭 시 수행할 동작
+        },
+        child: Icon(Icons.add, color: Colors.white, size: 40,),
+        backgroundColor: Colors.green, // 버튼의 배경색을 설정합니다.
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(30.0),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat, // 버튼의 위치를 설정합니다.
     );
   }
 }
