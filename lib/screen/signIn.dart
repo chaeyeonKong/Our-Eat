@@ -27,7 +27,7 @@ class _SignInPageState extends State<SignInPage> {
         color: Colors.black.withOpacity(0.7),
         ),
       Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -38,7 +38,7 @@ class _SignInPageState extends State<SignInPage> {
                 style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ),
-            SizedBox(height: 50.0),
+            SizedBox(height: 100.0),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               decoration: BoxDecoration(
@@ -70,20 +70,35 @@ class _SignInPageState extends State<SignInPage> {
                 ),
               ),
             ),
-            SizedBox(height: 15.0),
+            SizedBox(height: 40.0),
             SizedBox(
-              width:200.0,
+              width:300.0,
               child: ElevatedButton(
                 onPressed: (){
                   //눌렀을 때 로직 구현
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.white.withOpacity(0.8), // 버튼의 배경색을 불투명 흰색으로 설정
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.white.withOpacity(0.6), // 버튼의 배경색을 불투명 흰색으로 설정
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0), // 버튼의 테두리를 동그랗게 설정
                   ),
                 ),
                 child: Text('로그인'),
+              ),
+
+            ),
+            SizedBox(height: 10.0),
+            InkWell(
+              onTap: () {
+                // 회원가입 로직 추가
+              },
+              child: Text(
+                '회원가입하기',
+                style: TextStyle(
+                  color: Colors.white,
+                  decoration: TextDecoration.underline, // 밑줄 추가
+                ),
               ),
             ),
           ],
