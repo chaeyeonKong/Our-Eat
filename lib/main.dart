@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './screen/addMenu.dart';
+import './screen/myRecipe.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: AddMenuPage(),
+      home: AddRecipePage(),
     );
   }
 }

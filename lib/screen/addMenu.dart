@@ -60,7 +60,7 @@ class TextFieldWidget extends StatelessWidget {
               content: SingleChildScrollView(
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.8, // 화면 너비의 80%를 사용
-                  height: MediaQuery.of(context).size.height * 0.3, // 화면 높이의 50%를 사용
+                  height: MediaQuery.of(context).size.height * 0.4, // 화면 높이의 50%를 사용
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -81,7 +81,7 @@ class TextFieldWidget extends StatelessWidget {
                               borderSide: BorderSide.none,
                             ),
                             contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 16.0),
-                            prefixIcon: Icon(Icons.search),
+                            suffixIcon: Icon(Icons.search),
                           ),
                         ),
                       ),
