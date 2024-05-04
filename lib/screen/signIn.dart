@@ -99,7 +99,6 @@ class _SignInPageState extends State<SignInPage> {
                         _password = value;
                       });
                     },
-                    obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       labelText: '비밀번호',
