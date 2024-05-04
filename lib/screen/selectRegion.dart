@@ -11,17 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SelectRegion(),
+      home: selectRegion(),
     );
   }
 }
 
-class SelectRegion extends StatefulWidget {
+class selectRegion extends StatefulWidget {
   @override
-  _SelectRegionState createState() => _SelectRegionState();
+  _selectRegionState createState() => _selectRegionState();
 }
 
-class _SelectRegionState extends State<SelectRegion> {
+class _selectRegionState extends State<selectRegion> {
   final List<String> do_list = ["서울", "경기", "인천", "부산", "대구", "경남", "경북"];
 
   final List<String> gu_list = [
@@ -99,39 +99,7 @@ class _SelectRegionState extends State<SelectRegion> {
                     child: Container(
                       width: 100, // 버튼 width 지정
                       child: ElevatedButton(
-                        onPressed: () {
-                          // 버튼 클릭 시 동작
-                          print('Button $index clicked');
-                          setState(() {
-                            dongList = [
-                              "전체",
-                              "공덕동",
-                              "구수동",
-                              "노고산동",
-                              "당인동",
-                              "대흥동",
-                              "도화동",
-                              "마포동",
-                              "망원동",
-                              "상암동",
-                              "상수동",
-                              "서교동",
-                              "성산동",
-                              "신공덕동",
-                              "신수동",
-                              "신정동",
-                              "아현동",
-                              "염리동",
-                              "용강동",
-                              "중동",
-                              "창전동",
-                              "토정동",
-                              "하중동",
-                            ];
-                            selectedGuIndex = -1; // 선택한 구 인덱스 초기화
-                            selectedDongIndices.clear(); // 선택한 동 초기화
-                          });
-                        },
+                        onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white70, // 버튼 배경색
                           shape: RoundedRectangleBorder(
@@ -166,6 +134,38 @@ class _SelectRegionState extends State<SelectRegion> {
                             onTap: () {
                               // 클릭 이벤트 처리
                               print('Gu ${gu_list[index]} clicked');
+
+                              // 버튼 클릭 시 동작
+                              print('Button $index clicked');
+                              setState(() {
+                                dongList = [
+                                  "전체",
+                                  "공덕동",
+                                  "구수동",
+                                  "노고산동",
+                                  "당인동",
+                                  "대흥동",
+                                  "도화동",
+                                  "마포동",
+                                  "망원동",
+                                  "상암동",
+                                  "상수동",
+                                  "서교동",
+                                  "성산동",
+                                  "신공덕동",
+                                  "신수동",
+                                  "신정동",
+                                  "아현동",
+                                  "염리동",
+                                  "용강동",
+                                  "중동",
+                                  "창전동",
+                                  "토정동",
+                                  "하중동",
+                                ];
+                                selectedGuIndex = -1; // 선택한 구 인덱스 초기화
+                                selectedDongIndices.clear(); // 선택한 동 초기화
+                              });
                               setState(() {
                                 if (selectedGuIndex == index) {
                                   selectedGuIndex =

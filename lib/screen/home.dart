@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/screen/selectRegion.dart';
 import 'package:frontend/widget/bottomNavigation.dart';
 
 void main() {
@@ -70,12 +71,12 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 30.0),
                     child: GestureDetector(
                       onTap: () {
-                        print("sadfsd");
                         // 클릭 시 다음 화면으로 이동
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => SecondPage()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => selectRegion()),
+                        );
                       },
                       child: Text(
                         '지역 선택하기 ▼',
