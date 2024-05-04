@@ -10,6 +10,7 @@ class GoogleBottomBar extends StatefulWidget {
 
 class _GoogleBottomBarState extends State<GoogleBottomBar> {
   int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Container(

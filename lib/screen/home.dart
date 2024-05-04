@@ -7,12 +7,13 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      title: 'MaterialApp',
+        home: HomePage(),
     );
   }
 }
@@ -162,22 +163,35 @@ class ProductItem extends StatelessWidget {
     return Container(
       color: Colors.grey[200],
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset(
-            'assets/product$index.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
-            width: 100, // 이미지의 너비 설정
-            height: 100, // 이미지의 높이 설정
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10.0), // 모서리를 둥글게 만듭니다. 숫자를 조절하여 원하는 모양으로 변경할 수 있습니다.
+            child: Image.asset(
+              'assets/product1.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
+              width: 120, // 이미지의 너비 설정
+              height: 120, // 이미지의 높이 설정
+            ),
           ),
           SizedBox(height: 8),
           Padding(
-            padding: EdgeInsets.only(left: 8.0),
+            padding: EdgeInsets.only(left: 5.0),
             child: Text(
-              '상품명 $index', // 상품 이름 (예: 상품 0)
+              '김치찌개', // 상품 이름 (예: 상품 0)
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
+              ),
+            ),
+          ), // 이미지와 텍스트 사이의 간격 조절
+          SizedBox(height: 2),
+          Padding(
+            padding: EdgeInsets.only(left: 5.0),
+            child: Text(
+              '선착순 1명 | 마감 1시간 전', // 상품 이름 (예: 상품 0)
+              style: TextStyle(
+                fontSize: 15,
               ),
             ),
           ), // 이미지와 텍스트 사이의 간격 조절
