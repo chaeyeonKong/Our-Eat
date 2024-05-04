@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/screen/home.dart';
+import 'package:frontend/service/api_service.dart';
 import 'package:frontend/widget/bottomNavigation.dart';
 
 void main() {
@@ -264,7 +266,7 @@ class _selectRegionState extends State<selectRegion> {
               height: 10,
             ),
             GestureDetector(
-              onTap: () {
+              onTap: () async {
                 // 완료 텍스트 클릭 이벤트 처리
                 print('완료 버튼 클릭');
                 print(
@@ -273,10 +275,34 @@ class _selectRegionState extends State<selectRegion> {
                 if (selectedDongIndices.isEmpty) {
                   print('동을 선택하세요');
                 } else {
+                  try {
+                    List<int> li = [];
+                    selectedDongIndices.forEach((index) {
+                      li.add(index);
+                    });
+                    print(li);
+                    Map<String, dynamic> response = await ingredients('', li);
+
+                    print("Response: $response");
+                    if (response["message"] == 'Success') {
+                      print("성공");
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => SignInPage()));
+                    }
+                    // response['data'];
+                  } catch (e) {
+                    print("signUp Request Error: $e");
+                  }
+                  //
+
                   selectedDongIndices.forEach((index) {
                     print(dongList[index]);
                   });
                 }
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
               },
               child: Container(
                 alignment: Alignment.center,
