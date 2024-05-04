@@ -121,6 +121,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                             SizedBox(height: 16),
                             TextFormField(
+                              obscureText: true,
                               decoration: InputDecoration(
                                 labelText: '비밀번호',
                                 filled: true,
