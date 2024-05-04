@@ -35,11 +35,19 @@ class IngredientsPage extends StatelessWidget {
           children: [
             Row(
               children: [
-                SizedBox(width: 15.0),
-                CategoryText(text: '10,000'),
-                CategoryText(text: '20,000'),
-                CategoryText(text: '30,000'),
-                CategoryText(text: '40,000'),
+                SizedBox(width: 20.0),
+                Text('10,000',
+                  style:TextStyle(fontSize:23,fontWeight: FontWeight.bold, decoration: TextDecoration.underline, decorationColor: Colors.green, decorationThickness: 3.0)),
+                SizedBox(width: 20),
+                Text('20,000',
+                    style:TextStyle(fontSize:20,decoration: TextDecoration.underline, decorationColor: Colors.black)),
+                SizedBox(width: 20),
+                Text('30,000',
+                  style:TextStyle(fontSize:20,decoration: TextDecoration.underline, decorationColor: Colors.black)),
+                SizedBox(width: 20),
+                Text('40,000',
+                  style:TextStyle(fontSize:20,decoration: TextDecoration.underline, decorationColor: Colors.black),
+                ),
               ],
             ),
             SizedBox(height: 25.0),
@@ -90,25 +98,38 @@ class IngredientsItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
-            'assets/ingredient1.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
-            width: 100, // 이미지의 너비 설정
-            height: 100, // 이미지의 높이 설정
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10.0), // 모서리를 둥글게 만듭니다. 숫자를 조절하여 원하는 모양으로 변경할 수 있습니다.
+            child: Image.asset(
+              'assets/ingredient1.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
+              width: 140, // 이미지의 너비 설정
+              height: 110, // 이미지의 높이 설정
+            ),
           ),
           SizedBox(height: 8),
           Padding(
-            padding: EdgeInsets.only(left: 8.0),
+            padding: EdgeInsets.only(left: 5.0),
             child: Text(
-              '재료명1', // 상품 이름 (예: 상품 0)
+              '사과 한 박스', // 상품 이름 (예: 상품 0)
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
-          ),// 이미지와 텍스트 사이의 간격 조절
+          ), // 이미지와 텍스트 사이의 간격 조절
+          SizedBox(height: 2),
+          Padding(
+            padding: EdgeInsets.only(left: 5.0),
+            child: Text(
+              '선착순 2명 | 마감 1시간 전', // 상품 이름 (예: 상품 0)
+              style: TextStyle(
+                fontSize: 15,
+              ),
+            ),
+          ), // 이미지와 텍스트 사이의 간격 조절
         ],
       ),
     );
@@ -134,11 +155,11 @@ class CategoryText extends StatelessWidget {
             text,
             style: TextStyle(
               fontSize: 18.0,
-              fontWeight: FontWeight.bold,
+
               color: Colors.black,
               decoration: TextDecoration.underline, // 텍스트에 밑줄 추가
-              decorationColor: Colors.green,
-              decorationThickness: 3.0,
+
+              decorationThickness: 2.0,
             ),
           ),
         ),
