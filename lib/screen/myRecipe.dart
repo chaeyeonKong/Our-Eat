@@ -49,9 +49,11 @@ class AddRecipePage extends StatelessWidget {
                           ),
                           child: ClipRRect(
                             borderRadius : BorderRadius.circular(10.0),
-                            child: Image.network(
-                              'URL',
-                              fit: BoxFit.cover,
+                            child: Image.asset(
+                              'assets/menu2.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
+                              width: 80, // 이미지의 너비 설정
+                              height: 80,
+
                             ),
                           ),
                         ),
@@ -61,17 +63,17 @@ class AddRecipePage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                '메뉴 이름',
+                                '떡볶이',
                                 style: TextStyle(
-                                  fontSize: 18.0,
+                                  fontSize: 20.0,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               SizedBox(height: 8.0),
                               Text(
-                                '주문 수: 10', // 주문 수에 해당하는 데이터를 넣기
+                                '주문 수: 10만 +', // 주문 수에 해당하는 데이터를 넣기
                                 style: TextStyle(
-                                  fontSize: 16.0,
+                                  fontSize: 18.0,
                                 ),
                               ),
                             ],
@@ -111,16 +113,15 @@ class AddRecipePage extends StatelessWidget {
                         color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(60.0),
                       ),
-                      child: Center(
-                        child: Text(
-                          '재료 $index',
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
+                        child: ClipRRect(
+                          borderRadius : BorderRadius.circular(100.0),
+                          child: Image.asset(
+                            'assets/ingredient2.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
+                            width: 40, // 이미지의 너비 설정
+                            height: 40,
                           ),
                         ),
-                      ),
-                    );
+                      );
                   },
                 ),
               ),

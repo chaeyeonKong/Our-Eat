@@ -53,21 +53,21 @@ final _navBarItems = [
   SalomonBottomBarItem(
     icon: const Icon(Icons.home),
     title: const Text("홈"),
-    selectedColor: Colors.green,
+
   ),
   SalomonBottomBarItem(
     icon: const Icon(Icons.list),
     title: const Text("재료"),
-    selectedColor: Colors.green,
+
   ),
   SalomonBottomBarItem(
     icon: const Icon(Icons.fastfood_outlined),
     title: const Text("레시피"),
-    selectedColor: Colors.green,
+
   ),
   SalomonBottomBarItem(
     icon: const Icon(Icons.chat),
     title: const Text("커뮤니티"),
-    selectedColor: Colors.green,
+
   ),
 ];

@@ -17,7 +17,7 @@ class IngredientsPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                '가격 설정하기',
+                '재료 사기',
                 style: TextStyle(
                   fontSize: 26.0,
                   fontWeight: FontWeight.bold,

@@ -92,6 +92,7 @@ class _SignInPageState extends State<SignInPage> {
                     color: Colors.white.withOpacity(0.4),
                   ),
                   child: TextField(
+                    obscureText: true,
                     controller: _passwordController,
                     onChanged: (value) {
                       setState(() {
