@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/widget/bottomNavigation.dart';
 
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomePage(),
+    );
+  }
+}
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,10 +27,10 @@ class HomePage extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('assets/background2.jpeg'),
-                    fit: BoxFit.cover,
-                  ),
+                image: DecorationImage(
+                  image: AssetImage('assets/background2.jpeg'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Container(
@@ -28,28 +43,46 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Padding(
-                      padding: const EdgeInsets.only(left: 30.0),
-                  child: Text(
-                    '지역을 선택해주세요.',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      color: Colors.white,
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                      '지역을 선택해주세요.',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.start,
                     ),
-                    textAlign: TextAlign.start,
-                  ),
                   ),
                   SizedBox(height: 5.0), // 텍스트 사이의 간격을 조절합니다.
                   Padding(
-                      padding: const EdgeInsets.only(left: 30.0),
-                  child: Text(
-                    'MEDILUX 님,',
-                    style: TextStyle(
-                      fontSize: 35.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: Text(
+                      'MEDILUX 님,',
+                      style: TextStyle(
+                        fontSize: 35.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.start,
                     ),
-                    textAlign: TextAlign.start,
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        print("sadfsd")
+                        // 클릭 시 다음 화면으로 이동
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => SecondPage()),
+                        // );
+                      },
+                      child: Text(
+                        '지역 선택하기 ▼',
+                        style: TextStyle(fontSize: 15, color: Colors.white ,                        fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -64,7 +97,7 @@ class HomePage extends StatelessWidget {
           children: [
             SizedBox(height: 20.0),
             Padding(
-                padding: EdgeInsets.only(left: 8.0),
+              padding: EdgeInsets.only(left: 8.0),
               child: Text(
                 '우리동네에서 지금,', // 첫 번째 줄 텍스트
                 style: TextStyle(
@@ -75,7 +108,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Padding(
-                padding: EdgeInsets.only(left: 8.0),
+              padding: EdgeInsets.only(left: 8.0),
               child: Text(
                 '가장 인기 있는 레시피', // 두 번째 줄 텍스트
                 style: TextStyle(
@@ -84,7 +117,7 @@ class HomePage extends StatelessWidget {
                   color: Colors.green,
                 ),
               ),
-            ),// 첫 번째 줄 텍스트와 두 번째 줄 텍스트 사이의 간격
+            ), // 첫 번째 줄 텍스트와 두 번째 줄 텍스트 사이의 간격
 
             SizedBox(height: 20.0), // 추가적인 세로 길이를 위한 여백 추가
             Expanded(
@@ -107,13 +140,14 @@ class ProductList extends StatelessWidget {
       crossAxisSpacing: 8.0, // 수평 간격 설정
       children: List.generate(
         10, // 상품 개수 설정 (임의로 10개로 설정)
-            (index) {
+        (index) {
           return ProductItem(index: index);
         },
       ),
     );
   }
 }
+
 class ProductItem extends StatelessWidget {
   final int index;
 
@@ -134,15 +168,15 @@ class ProductItem extends StatelessWidget {
           ),
           SizedBox(height: 8),
           Padding(
-              padding: EdgeInsets.only(left: 8.0),
-              child: Text(
-                '상품명 $index', // 상품 이름 (예: 상품 0)
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+            padding: EdgeInsets.only(left: 8.0),
+            child: Text(
+              '상품명 $index', // 상품 이름 (예: 상품 0)
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
-          ),// 이미지와 텍스트 사이의 간격 조절
+          ), // 이미지와 텍스트 사이의 간격 조절
         ],
       ),
     );
