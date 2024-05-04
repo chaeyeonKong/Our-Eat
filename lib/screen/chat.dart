@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/screen/signIn.dart';
-import 'package:frontend/widget/bottomNavigation.dart';
 
 void main() {
   runApp(ChatApp());
@@ -11,15 +9,27 @@ class ChatApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Chat App',
-      home: Scaffold(
-        body: ChatScreen(),
-        bottomNavigationBar: GoogleBottomBar(),
-      ),
+      home: ChatScreen(),
     );
   }
 }
 
-class ChatScreen extends StatelessWidget {
+class ChatScreen extends StatefulWidget {
+  @override
+  _ChatScreenState createState() => _ChatScreenState();
+}
+
+class _ChatScreenState extends State<ChatScreen> {
+  final TextEditingController _controller = TextEditingController();
+  final List<String> _messages = [];
+
+  void _sendMessage() {
+    setState(() {
+      _messages.insert(0, _controller.text);
+      _controller.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,22 +40,17 @@ class ChatScreen extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: 20, // 대화 목록의 예시를 위해 임의의 숫자를 지정합니다.
+              reverse: true,
+              itemCount: _messages.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                  leading: CircleAvatar(
-                    child: Text('A'), // 대화 상대의 이니셜이나 프로필 이미지를 표시합니다.
-                  ),
-                  title: Text('User $index'),
-                  subtitle: Text('Message $index'), // 마지막 메시지를 표시합니다.
-                  trailing: Text('12:34'), // 마지막 메시지의 시간을 표시합니다.
+                  title: Text(_messages[index]),
                 );
               },
             ),
           ),
-          Divider(height: 0), // 대화 목록과 하단 입력창을 구분하는 구분선입니다.
-          _buildMessageInput(), // 하단에 메시지 입력창을 표시합니다.
-          TransparentButton(), // 투명 버튼을 표시합니다.
+          Divider(height: 0),
+          _buildMessageInput(),
         ],
       ),
     );
@@ -61,6 +66,7 @@ class ChatScreen extends StatelessWidget {
         children: [
           Expanded(
             child: TextField(
+              controller: _controller,
               decoration: InputDecoration(
                 hintText: '메시지를 입력하세요...',
                 border: InputBorder.none,
@@ -69,43 +75,9 @@ class ChatScreen extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(Icons.send),
-            onPressed: () {
-              // 메시지 전송 기능을 구현할 수 있습니다.
-            },
+            onPressed: _sendMessage,
           ),
         ],
-      ),
-    );
-  }
-}
-
-class TransparentButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-      bottom: 0,
-      left: 0,
-      right: 0,
-      child: GestureDetector(
-        onTap: () {
-          // 페이지 이동 기능을 구현합니다.
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => SignInPage()));
-        },
-      ),
-    );
-  }
-}
-
-class NextPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Next Page'),
-      ),
-      body: Center(
-        child: Text('다음 페이지'),
       ),
     );
   }
