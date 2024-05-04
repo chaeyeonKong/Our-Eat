@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/screen/chat.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:frontend/screen/home.dart';
 import 'package:frontend/screen/menu.dart';
@@ -18,6 +19,7 @@ class _GoogleBottomBarState extends State<GoogleBottomBar> {
     HomePage(),
     IngredientsPage(),
     MenuPage(),
+    ChatApp(),
   ];
 
   void _onItemTapped(int index) {

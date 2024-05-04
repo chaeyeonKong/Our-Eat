@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/widget/bottomNavigation.dart';
 
 void main() {
   runApp(ChatApp());
@@ -53,6 +54,7 @@ class _ChatScreenState extends State<ChatScreen> {
           _buildMessageInput(),
         ],
       ),
+      bottomNavigationBar: GoogleBottomBar(),
     );
   }
 
