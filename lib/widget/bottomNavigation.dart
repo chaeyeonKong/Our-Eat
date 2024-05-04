@@ -24,6 +24,12 @@ class _GoogleBottomBarState extends State<GoogleBottomBar> {
     setState(() {
       _selectedIndex = index;
     });
+
+    // 모든 위젯으로 이동하도록 설정합니다.
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => _screenOptions[index]),
+    );
   }
 
   @override
