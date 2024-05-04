@@ -107,7 +107,7 @@ class MenuItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/menu$index.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
+            'assets/menu1.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
             width: 100, // 이미지의 너비 설정
             height: 100, // 이미지의 높이 설정
           ),
@@ -115,7 +115,7 @@ class MenuItem extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 8.0),
             child: Text(
-              '메뉴명 $index', // 상품 이름 (예: 상품 0)
+              '떡볶이', // 상품 이름 (예: 상품 0)
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

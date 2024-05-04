@@ -94,7 +94,7 @@ class IngredientsItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'assets/ingredient$index.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
+            'assets/ingredient1.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
             width: 100, // 이미지의 너비 설정
             height: 100, // 이미지의 높이 설정
           ),
@@ -102,7 +102,7 @@ class IngredientsItem extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 8.0),
             child: Text(
-              '재료명 $index', // 상품 이름 (예: 상품 0)
+              '재료명1', // 상품 이름 (예: 상품 0)
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
