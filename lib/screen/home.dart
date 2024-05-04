@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 30.0),
                     child: GestureDetector(
                       onTap: () {
-                        print("sadfsd")
+                        print("sadfsd");
                         // 클릭 시 다음 화면으로 이동
                         // Navigator.push(
                         //   context,
@@ -79,7 +79,10 @@ class HomePage extends StatelessWidget {
                       },
                       child: Text(
                         '지역 선택하기 ▼',
-                        style: TextStyle(fontSize: 15, color: Colors.white ,                        fontWeight: FontWeight.bold,
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
