@@ -18,7 +18,7 @@ class MenuPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                '가격 설정하기',
+                '레시피 사기',
                 style: TextStyle(
                   fontSize: 26.0,
                   fontWeight: FontWeight.bold,
@@ -75,6 +75,7 @@ class MenuPage extends StatelessWidget {
         child: Icon(Icons.add, color: Colors.white, size: 40),
         backgroundColor: Colors.green, // 버튼의 배경색을 설정합니다.
         shape: RoundedRectangleBorder(
+          borderRadius:BorderRadius.circular(30.0),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat, // 버튼의 위치를 설정합니다.
