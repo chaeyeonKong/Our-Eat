@@ -24,8 +24,7 @@ Future<Map<String, dynamic>> login(
   String userName,
   String password,
 ) async {
-  final url =
-      Uri.parse('$baseUrl/api/v1/ingredients?search={String}&dongNm={1, 2, 3}');
+  final url = Uri.parse('$baseUrl/api/v1/user/login');
   final data = jsonEncode({
     'userName': userName,
     'password': password,
