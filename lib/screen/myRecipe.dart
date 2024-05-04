@@ -49,6 +49,8 @@ class AddRecipePage extends StatelessWidget {
                           ),
                           child: ClipRRect(
                             borderRadius : BorderRadius.circular(10.0),
+
+
                             child: Image.asset(
                               'assets/menu2.jpg', // 상품 이미지 경로 (예: assets/product_0.jpg)
                               width: 80, // 이미지의 너비 설정

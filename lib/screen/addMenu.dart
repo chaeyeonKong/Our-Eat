@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:frontend/screen/myRecipe.dart';
 import 'package:frontend/widget/bottomNavigation.dart';
 
 class AddMenuPage extends StatelessWidget {
@@ -84,6 +85,25 @@ class TextFieldWidget extends StatelessWidget {
                             suffixIcon: Icon(Icons.search),
                           ),
                         ),
+                      ),
+                      SizedBox(height: 20), // 이미지와 텍스트 사이의 간격 조절
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => AddRecipePage()),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/menu2.jpg', // 이미지 경로
+                          width: 120, // 이미지의 너비 설정
+                          height: 120, // 이미지의 높이 설정
+                        ),
+                      ),
+                      SizedBox(height: 10), // 텍스트와 다음 위젯 사이의 간격 조절
+                      Text(
+                        '떡볶이', // 텍스트 내용
+                        style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),

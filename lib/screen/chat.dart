@@ -35,7 +35,14 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chat'),
+        title: Text(
+          '채팅',
+          textAlign: TextAlign.center,
+          // 다른 스타일 옵션을 추가할 수도 있습니다.
+          style: TextStyle(
+            // 여기에 텍스트 스타일을 추가하세요.
+          ),
+        ),
       ),
       body: Column(
         children: [
