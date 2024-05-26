@@ -1,17 +1,14 @@
-# frontend
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Frontend
+![메디럭스 잇타 해커톤 (2)-이미지-0](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/b8e76bf7-c62a-4d1d-9759-d3cfbb6d4a3e)
+![메디럭스 잇타 해커톤 (2)-이미지-1](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/2bcd3e77-3ab9-45bf-8589-daff12387311)
+![메디럭스 잇타 해커톤 (2)-이미지-2](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/1a065c85-9cf4-41f9-b108-2c97567299b5)
+![메디럭스 잇타 해커톤 (2)-이미지-3](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/130f7650-5cc5-4bea-a9d8-0023bb698a95)
+![메디럭스 잇타 해커톤 (2)-이미지-4](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/c7c3d43b-27ae-4162-88ba-3e40264b3a70)
+![메디럭스 잇타 해커톤 (2)-이미지-6](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/2695669c-0b6b-44e5-91f5-0dd93fdb1e80)
+![메디럭스 잇타 해커톤 (2)-이미지-5](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/b1873544-62e5-41a1-8d62-0eb0783e0aca)
+![메디럭스 잇타 해커톤 (2)-이미지-7](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/e57c56a6-b327-4faa-a484-3dec682a8bc5)
+![메디럭스 잇타 해커톤 (2)-이미지-9](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/a689d8f2-0b0c-42ab-acf3-db2094e2de34)
+![메디럭스 잇타 해커톤 (2)-이미지-8](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/31244859-561a-48e5-a856-d2dbe3ea9cdf)
+![메디럭스 잇타 해커톤 (2)-이미지-10](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/c0d2e295-8df1-4f7d-ab0e-7c8085943b0d)
+![메디럭스 잇타 해커톤 (2)-이미지-11](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/c128bcbb-2918-4fde-a750-92b9e039c0f4)
+![메디럭스 잇타 해커톤 (2)-이미지-12](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/90921c21-67b3-4c7f-887e-6881c1165292)
+![메디럭스 잇타 해커톤 (2)-이미지-13](https://github.com/chaeyeonKong/Our-Eat/assets/66231912/4df86ba8-2e40-4f45-88f7-856a5d4ef029)
